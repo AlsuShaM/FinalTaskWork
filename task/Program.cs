@@ -5,13 +5,30 @@
 //[“1234”, “1567”, “-2”, “computer science”] → [“-2”]
 //[“Russia”, “Denmark”, “Kazan”] → []
 
-string[] array1 = {"Hello", "2", "world", ":-)"};
-string[] array2 = {"1234", "1567", "-2", "computer science"};
-string[] array3 = {"Russia", "Denmark", "Kazan"};
 
-int strLength = 3;
-
-string[] newArray1 = (string[] array)
+string[] array1 = { "Hello", "2", "world", ":-)" }; 
+string[] array2 = new string[array1.Length];
+void NewArray (string[] array1, string[] array2)
 {
-    int strLength = arrayLength
+    int count = 0;
+    for(int i = 0; i < array1.Length; i++)
+    {
+        if(array1.Length <= 3)
+        {
+            array2[count] = array1[i];
+            count++;
+        }
+    }
+    
 }
+void Print(string[] array)
+{
+     for(int i = 0; i < array1.Length; i++)
+    {
+        Console.WriteLine($"{array[i]}");
+    }
+    Console.WriteLine();
+}
+
+NewArray(array1, array2);
+Print(array2);
