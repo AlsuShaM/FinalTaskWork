@@ -6,14 +6,15 @@
 //[“Russia”, “Denmark”, “Kazan”] → []
 
 
-string[] array1 = { "Hello", "2", "world", ":-)" }; 
+string[] array1 = new string[]{ "Russia", "Denmark", "Kazan" }; 
 string[] array2 = new string[array1.Length];
+
 void NewArray (string[] array1, string[] array2)
 {
     int count = 0;
     for(int i = 0; i < array1.Length; i++)
     {
-        if(array1.Length <= 3)
+        if(array1[i].Length < 4)
         {
             array2[count] = array1[i];
             count++;
@@ -21,14 +22,15 @@ void NewArray (string[] array1, string[] array2)
     }
     
 }
-void Print(string[] array)
+string PrintGood(string[] array)
 {
-     for(int i = 0; i < array1.Length; i++)
-    {
-        Console.WriteLine($"{array[i]}");
-    }
-    Console.WriteLine();
+  string result = "[ ";
+  for(int i = 0; i < array1.Length; i++)
+  {
+    result +=($"{array[i]} ");
+  }
+    return result + "]";
 }
 
 NewArray(array1, array2);
-Print(array2);
+Console.WriteLine(PrintGood(array2));
